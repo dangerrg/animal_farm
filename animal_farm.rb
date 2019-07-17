@@ -8,4 +8,13 @@ class AnimalFarm
 
     @animals << animal
   end
+
+  def food_for(animal)
+    case(animal)
+    when Horse    then 'Hay'
+    when Duck     then 'Pond weed'
+    when Dog      then 'Peanut butter'
+    else 'No idea for this animal.  Probably bread'
+    end
+  end
 end
