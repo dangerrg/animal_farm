@@ -33,4 +33,16 @@ class AnimalFarm
       "No more room at the farm"
     end
   end
+
+  def how_much_room?
+    @animals = [] if @animals.nil?
+
+    case(@animals.length)
+    when 0 then "We're empty!"
+    when 1 then "One lonely animal..."
+    when 2 then "We've plenty of room"
+    when 3 then "We're nearly full...!"
+    else "No more room at the farm"
+    end
+  end
 end
