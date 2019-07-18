@@ -52,3 +52,12 @@ that returns the calculated value of multiplying `AVERAGE_SPEED_IN_KPH` by `KPH_
 6. Define a method `#speed=` in the Runs module that takes one parameter, `new_speed`, and assigns it to an instance variable `@speed`. This allows us to set a custom speed for any animal that Runs.
 7. In the `Horse#speed_in_miles_per_hour`, perform the calculation with the `@speed` instance variable if it is not `nil`. If it is `nil`, use the `AVERAGE_SPEED_IN_KPH` constant.
 8. Do the same for `Dog#speed_in_miles_per_hour`.
+
+Tasks 13. Or-equals
+1. In the `AnimalFarm#how_full?` method, use `||=` for the guard clause that initializes the `@animals` Array instead of an `if` conditional.
+2. Do the same for the `AnimalFarm#welcome` and `AnimalFarm#how_much_room?` methods.
+3. The following methods in the AnimalFarm class don't have guard clauses to initialize the `@animals` Array. Introduce a guard clause to each that uses the `||=` operator.
+    1. `AnimalFarm#sunrise!`
+    2. `AnimalFarm#sunset!`
+    3. `AnimalFarm#all_asleep?`
+    4. `AnimalFarm#number_of`
