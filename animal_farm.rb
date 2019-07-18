@@ -4,7 +4,7 @@ require './dog'
 
 class AnimalFarm
   def welcome(animal)
-    @animals = [] if @animals.nil?
+    @animals ||= []
 
     @animals << animal
   end
@@ -19,7 +19,7 @@ class AnimalFarm
   end
 
   def how_full?
-    @animals = [] if @animals.nil?
+    @animals ||= []
 
     if(@animals.length == 0)
       "We're empty!"
@@ -35,7 +35,7 @@ class AnimalFarm
   end
 
   def how_much_room?
-    @animals = [] if @animals.nil?
+    @animals ||= []
 
     case(@animals.length)
     when 0 then "We're empty!"
