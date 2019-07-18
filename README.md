@@ -15,7 +15,10 @@ Tasks 03. Classes and modules
 
 Tasks 05. Conditionals
 1. Create a new file called `animal_farm.rb` within the `animal_farm` folder. Create a class in this file called AnimalFarm and require each of the animal files (`horse.rb`,  `duck.rb` and `dog.rb`) as well.
-2. Create an instance method in AnimalFarm called #welcome that takes one parameter, `animal`. Use a single line conditional to check whether the instance variable `@animals` has been initialized as an Array, initializing it if it is nil. Then add the animal to the `@animals` Array.
+2. Create an instance method in AnimalFarm called #welcome that takes one
+parameter, `animal`. Use a single line conditional to check whether the instance
+variable `@animals` has been initialized as an Array, initializing it if it is
+nil. Then add the animal to the `@animals` Array.
 3. Start an IRB session, require the `animal_farm.rb` file and try out the `#welcome` method with some new animal instances.
 4. Create an instance method called `#food_for` and implement the conditional described in this unit. The method should return a String containing the food for the animal that was passed into `food_for`.
 5. Create an instance method called `#how_full?`. Create a conditional in this method that will return different Strings depending on how many items there are in the  `@animals` array. Ensure that if the `@animals` Array has not been initialized, the method will not cause an error. Use the following Strings in the method.
@@ -25,3 +28,15 @@ Tasks 05. Conditionals
     - For three items, `"We're nearly full...!"`.
     - For four or more items, `"No more room at the farm"`.
 6. Try out the `#how_full?` method in IRB. There are many ways to implement the method from task 4. Come up with an alternative implementation within a method called `how_much_room?`
+
+Tasks 07. Inline blocks
+1. Implement an instance method ``#sleeping?`` within the Sleeps module that
+returns the value of the instance variable `@sleeping`.
+2. Implement an instance method in AnimalFarm called `#sunrise!`. This method will use an inline block with the `Array#each` method in order to call `#wake_up!` on each item in the `@animals` Array.
+3. Implement an instance method in AnimalFarm called `#sunset!`. This method will use an inline block with the `Array#each` method in order to call `#go_to_sleep!` on each item in the `@animals` Array.
+4. Implement a method called `#all_asleep?` that will use the `Array#all?` method along with an inline block to indicate whether all of the animals within the  @animals Array are asleep. Test this new method in IRB along with the methods defined in tasks 2 and 3.
+5. Implement a method called `#number_of`. This will take one parameter called
+`type_of_animal`. The method will allow a class to be passed in as a parameter
+and return the total number of animals in the @animals array that are the same
+kind of class. _This method is a more general version of number_of_ducks from
+this unit that uses the #kind_of? method.`.
