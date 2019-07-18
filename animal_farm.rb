@@ -47,18 +47,26 @@ class AnimalFarm
   end
 
   def sunrise!
+    @animals ||= []
+
     @animals.each { |animal| animal.wake_up! }
   end
 
   def sunset!
+    @animals ||= []
+
     @animals.each { |animal| animal.go_to_sleep! }
   end
 
   def all_asleep?
+    @animals ||= []
+
     @animals.all? { |animal| animal.sleeping? }
   end
 
   def number_of(type_of_animal)
+    @animals ||= []
+
     @animals.count {|animal| animal.kind_of? type_of_animal }
   end
 end
