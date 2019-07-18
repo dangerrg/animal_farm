@@ -39,4 +39,16 @@ returns the value of the instance variable `@sleeping`.
 `type_of_animal`. The method will allow a class to be passed in as a parameter
 and return the total number of animals in the @animals array that are the same
 kind of class. _This method is a more general version of number_of_ducks from
-this unit that uses the #kind_of? method.`.
+this unit that uses the #kind_of? method.`_.
+
+Tasks 09. Numbers
+1. Declare a constant `KPH_TO_MPH` within the Runs module that has a value of `0.6213712`.
+2. Declare a constant `AVERAGE_SPEED_IN_KPH` (kilometres per hour) in the Horse class that has a value of `44`.
+3. Define an instance method `#speed_in_miles_per_hour` within the Horse class
+that returns the calculated value of multiplying `AVERAGE_SPEED_IN_KPH` by `KPH_TO_MPH`.
+4. Declare a constant `AVERAGE_SPEED_IN_KPH` (kilometres per hour) in the Dog class that has a value of `29`.
+5. Define an instance method `#speed_in_miles_per_hour` within the Dog class
+that returns the calculated value of multiplying `AVERAGE_SPEED_IN_KPH` by `KPH_TO_MPH`.
+6. Define a method `#speed=` in the Runs module that takes one parameter, `new_speed`, and assigns it to an instance variable `@speed`. This allows us to set a custom speed for any animal that Runs.
+7. In the `Horse#speed_in_miles_per_hour`, perform the calculation with the `@speed` instance variable if it is not `nil`. If it is `nil`, use the `AVERAGE_SPEED_IN_KPH` constant.
+8. Do the same for `Dog#speed_in_miles_per_hour`.
